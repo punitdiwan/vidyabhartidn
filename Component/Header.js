@@ -33,7 +33,7 @@ const Header = ({header_data}) => {
               {/* Rose Mary Hr. Sec. School */}
             </span>
             <p className=" flex ml-10 md:ml-2 md:justify-center       font-medium md:font-semibold">
-            {header_data?.data? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
+            {header_data?.data? header_data?.data[0]?.address : "Coach factory road, Street No.07, dwarka nagar."}
               {/* Dwarka Nagar Bhopal */}
             </p> 
           </div>
