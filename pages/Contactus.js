@@ -13,7 +13,7 @@ const Contactus = ({data_header}) => {
         </div>
         <div className="mt-[15px] lg:mx-16 px-6     flex md:flex-row flex-col">
           <iframe className=" md:w-[600px] md:h-[450px] "
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7329.708064163802!2d77.419993!3d23.284753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42104454ff834667!2sVidya%20Bharti%20Hr.%20Sec.%20School!5e0!3m2!1sen!2sin!4v1635158964930!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.0647376288116!2d77.41982879999999!3d23.277097299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c6835f4864423%3A0x42104454ff834667!2sVidhya%20Bharti%20Hr.%20Sec.%20School%2C%20Dwarka%20Nagar!5e0!3m2!1sen!2sin!4v1754129309794!5m2!1sen!2sin"
 
             style={{ border: "0" }}
             allowFullScreen=""
@@ -31,7 +31,8 @@ const Contactus = ({data_header}) => {
             {data_header?.data? data_header?.data[0]?.address : "  Maitretech School Bhopal"}
               {/* Dwarka Nagar , Nisatpura , Bhopal-462010 Phone: 0755-2740018 */}
             </address>
-            <div>phone: {data_header?.data? data_header?.data[0]?.phone : "111111211"}</div>
+            <div> <strong>Phone :</strong> 0{data_header?.data? data_header?.data[0]?.phone : "111111211"}</div>
+            <div> <strong>Mobile :</strong>{data_header?.data? data_header?.data[0]?.mobile : "2222222222"}</div>
             <strong>Email:</strong>
             <address className="text-black">
               <a>

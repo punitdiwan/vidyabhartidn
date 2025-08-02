@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TbDeviceLandlinePhone } from "react-icons/tb";
 const Footer = ({header_data}) => {
 
   // console.log(header_data)
@@ -9,7 +10,7 @@ const Footer = ({header_data}) => {
         <div className="">
           <div className="flex flex-row ">
             <img
-            src={header_data?.data? header_data?.data[0]?.logo?.data?.full_url : "https://rosemarydn.com/images/logo.png"}
+            src={header_data?.data? header_data?.data[0]?.logo?.data?.full_url?.replace('http://', 'https://') : "https://rosemarydn.com/images/logo.png"}
               // src="https://rosemarydn.com/images/logo.png"
               className=" h-[5rem] w-[5rem]"
             />
@@ -68,12 +69,23 @@ const Footer = ({header_data}) => {
                 d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"
               ></path>
             </svg>
-            <span className="ml-2 mt-2">
-            {header_data?.data? header_data?.data[0]?.phone : "111111211"}
+          <span className="ml-2 mt-2">
+            0{header_data?.data? header_data?.data[0]?.phone : "111111211"}
               {/* 0755-2740018 */}
               </span>
           </span>
 
+          <div className="mt-2 " >
+            <hr className="myLine" />
+          </div>
+
+          <span className="flex flex-row items-center text-white">
+            <TbDeviceLandlinePhone /> 
+            <span className="ml-2 mt-2">
+                {header_data?.data? header_data?.data[0]?.mobile : "111111211"}
+            </span>
+          </span>
+          
           <div className="mt-2 " >
             <hr className="myLine" />
           </div>
@@ -111,9 +123,8 @@ const Footer = ({header_data}) => {
           <h3 className="text-lg" >Important Links</h3>
           <ul className="">
             <li className="">
-              <a
+              <div
                 className=" text-[#e0d917]  flex flex-row items-center  hover:no-underline "
-                href="#"
               >
                 <svg
                   width="3%"
@@ -136,12 +147,12 @@ const Footer = ({header_data}) => {
 
                   Home
                 </a>
-              </a>
+              </div>
             </li>
             <li>
-              <a
+              <div
                 className="flex flex-row items-center hover:no-underline"
-                href="#"
+                
               >
                 <svg
                   width="3%"
@@ -163,12 +174,12 @@ const Footer = ({header_data}) => {
         
                   contact us
                 </a>
-              </a>
+              </div>
             </li>
             <li>
-              <a  
+              <div  
                 className="flex flex-row items-center text-yellow-300 hover:no-underline "
-                href="#"
+              
               >
                 <svg
                   width="3%"
@@ -190,12 +201,12 @@ const Footer = ({header_data}) => {
             
                   Gallery
                 </a>
-              </a>
+              </div>
             </li>
             <li>
-              <a
+              <div
                 className="flex flex-row items-center text-yellow-300 hover:no-underline"
-                href="#"
+               
               >
                 <svg
                   width="3%"
@@ -220,7 +231,7 @@ const Footer = ({header_data}) => {
 
                   Facilities
                 </a>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
