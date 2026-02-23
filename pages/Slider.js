@@ -8,42 +8,46 @@ import React, { useState, useEffect } from 'react';
 
 const Slider = ({ slider_data }) => {
 
-   
 
+  console.log("slider_data",slider_data)
   const slides = [
     { title: "/images/is15.jpg ", description: 'Lorem ipsum' },
     { title: "/images/sd2.jpg", description: 'Lorem ipsum' },
   ];
-  
+  const sortedSlides = slider_data?.data
+    ? [...slider_data.data].sort((a, b) => a.sort_order - b.sort_order)
+    : [];
+
+
 
   return (
     <div>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} className="mt-14"  >
-        {slider_data?.data?.length > 0 ?
-            slider_data?.data?.map((item, index) => {
-              return <div className="carousel-inner" role="listbox" key={index} >
-                <div className='carousel' role="listbox">
-                  <img
-                    src={item?.image?.data?.full_url?.replace('http://', 'https://')}
-                    className="w-full md:h-[400px] lg:h-[500px] h-[230px]"
-                    alt="sorry_no_img"
-                  />
-                </div>
+        {sortedSlides.length > 0 ?
+          sortedSlides.map((item, index) => {
+            return <div className="carousel-inner" role="listbox" key={index} >
+              <div className='carousel' role="listbox">
+                <img
+                  src={item?.image?.data?.full_url?.replace('http://', 'https://')}
+                  className="w-full md:h-[400px] lg:h-[500px] h-[230px]"
+                  alt="sorry_no_img"
+                />
               </div>
-            })
-            :
-            slides.map((slide, index) => {
-              return <div className="carousel-inner" key={index} role="listbox">
-                <div className='carousel' role="listbox">
-                  <img
-                    src={slide.title}
-                    height={500} width={1500}
-                    alt="sorry_no_img"
-                    className="w-full md:h-[400px] lg:h-[500px]"
-                  />
-                </div>
+            </div>
+          })
+          :
+          slides.map((slide, index) => {
+            return <div className="carousel-inner" key={index} role="listbox">
+              <div className='carousel' role="listbox">
+                <img
+                  src={slide.title}
+                  height={500} width={1500}
+                  alt="sorry_no_img"
+                  className="w-full md:h-[400px] lg:h-[500px]"
+                />
               </div>
-            })}
+            </div>
+          })}
       </Carousel>
     </div>
   )
@@ -51,4 +55,4 @@ const Slider = ({ slider_data }) => {
 
 export default Slider
 
- 
+
