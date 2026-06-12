@@ -128,6 +128,6 @@ export async function getStaticProps(context) {
   }
   return {
     props: { data_header },
-    revalidate: 10800, // 3 hours - school content changes infrequently
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 }

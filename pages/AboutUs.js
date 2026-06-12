@@ -37,7 +37,7 @@ const AboutUs = ({ data_header }) => {
   return (
     <Layout header_data={data_header}>
       <div
-        className="mx-3 "
+        className="mx-3 mt-10"
       >
         <img
           className="w-full "
@@ -46,65 +46,15 @@ const AboutUs = ({ data_header }) => {
         <div className="leading-[ 22.5px] font-normal">
           <h5 className="text-center">
             {/* {data?.heading || "About School"} */}
+            {/* About us */}
             About us
 
           </h5>
           <p className="mb-0">
-          Vidya Bharti Hr. Sec. School was founded in 1982 and this group of schools is run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education. Core values The School District believes that an effective school is one that:Sets high expectations and places student needs above all else. These student needs include academic, aesthetic, emotional and social, as well as safety, physical comfort, health, and self-esteem. Has a quality instructional program that develops positive interpersonal skills, prepares students to be responsible, well informed citizens with high moral and ethical standards, creative problem solvers, effective communicators in a technological society, and promotes lifelong growth.Promotes active parent involvement in the child’s total well-being. Encourages, values and respects students, staff, parent, and community participation in decision making.
+            Rose Mary School is a Higher secondary school for both girls and boys managed by rose mary Group. Rose Mary Group was established in 1991 and run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education.
+            We, Rose Mary High School, understand that each child is a distinct individual who needs to be nurtured in order to grow into a mature and responsible citizen. Our academic infrastructure along with a wide range of co-curricular activities help our students in the all round personality development. We have a strong team of motivated teachers who are always ready to accept challenges of developing the potential of each and every student. Keeping in view the ideas of democracy and our ancient culture, Rose Mary High School strives to provide a system of education most suited to the needs of our society today. Stress on innovative methods of teaching , opportunities for shouldering responsibilities during school life, constant participation in sports and co-curricular activities lend meaning to the school life. Thus, the end product is the harmonious, all round developed personality of our students poised on the threshold of life.
           </p>
         </div>
-        <div className="leading-[ 22.5px] font-normal">
-          <h5 className="text-center">
-            {/* {data?.heading || "About School"} */}
-            Core values
-
-          </h5>
-          <p className="mb-0">
-          The School District believes that an effective school is one that:Sets high expectations and places student needs above all else. These student needs include academic, aesthetic, emotional and social, as well as safety, physical comfort, health, and self-esteem. Has a quality instructional program that develops positive interpersonal skills, prepares students to be responsible, well informed citizens with high moral and ethical standards, creative problem solvers, effective communicators in a technological society, and promotes lifelong growth.Promotes active parent involvement in the child’s total well-being. Encourages, values and respects students, staff, parent, and community participation in decision making.
-          </p>
-        </div>
-        <div className="leading-[ 22.5px] font-normal">
-          <h5 className=" ">
-            {/* {data?.heading || "About School"} */}
-            VISION 
-
-          </h5>
-          <p className="mb-0 ">
-          100% Student Success
-          </p>
-        </div>
-        <div className="leading-[ 22.5px] font-normal">
-          <h5 className="">
-            {/* {data?.heading || "About School"} */}
-            MISSION 
-
-          </h5>
-          <p className="mb-0  ">
-          Educate and prepare each student for a life of purpose
-          </p>
-        </div>  
-        <div className="leading-[ 22.5px] font-normal">
-          <h5 className=" ">
-            {/* {data?.heading || "About School"} */}
-            CORE VALUES
-
-          </h5>
-          <p className="mb-0  ">
-          Commitment to children, families and the community
-          </p>
-        <ul className="list-disc ml-5">
-          <li> Making decisions and committing resources to attain each student’s success</li>
-          <li> Establishing positive relationships based on trust and respect</li>
-          <li> Seeking out and connecting with families and community Respectful and caring relationships</li>
-          <li>Valuing the contributions of all stakeholders</li>
-          <li>Understanding individual differences</li><li> Capitalizing on the beneficial value these differences bring to our school</li>
-          <li>Developing age respectful expectations of students</li><li>Honoring the values, rights and responsibilities of each individual</li>
-
-        </ul>
-
-        </div>
-
-
         <img
           className="w-full"
           src="/images/lower.png"
@@ -131,6 +81,6 @@ export async function getStaticProps(context) {
   }
   return {
     props: { data_header },
-    revalidate: 10800, // 3 hours - school content changes infrequently
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 }
