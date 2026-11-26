@@ -21,7 +21,7 @@ const GalleryFacebookSection = ({ header_data }) => {
   const galleryItems = gallery_data?.data?.slice(0, 5) || [];
 
   // CMS Links
-  const instagramUrl = schoolData?.instagram || "";
+  const instagramUrl = "https://www.instagram.com/v_b_school_dwarka_nagar_bhopal?lqvp=MXdqdXdwODlubnZpaw==";
   const facebookUrl = schoolData?.facebook || "";
 
   // Instagram Embed
@@ -94,92 +94,89 @@ const GalleryFacebookSection = ({ header_data }) => {
             </Link>
           </div>
 
-          {/* ================= Instagram ================= */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-              <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
-                Instagram
-              </h2>
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-            </div>
+         
+{/* ================= Instagram ================= */}
 
-            <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
-              <div className="h-[350px] overflow-hidden rounded-md bg-gray-50">
+<div className="flex flex-col items-center">
+  <div className="flex items-center gap-3 mb-8">
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
 
-                {instagramUrl ? (
-                  <iframe
-                    src={instagramEmbed}
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allow="encrypted-media"
-                    title="Instagram"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full">
-                    Instagram Link Not Available
-                  </div>
-                )}
+    <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
+      Instagram
+    </h2>
 
-              </div>
-            </div>
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
+  </div>
 
-            <a
-              href={instagramUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
-            >
-              View On Instagram
-            </a>
-          </div>
+  <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
+    <div className="relative h-[350px] overflow-hidden rounded-md bg-gray-50">
 
-          {/* ================= Facebook ================= */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-              <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
-                Facebook
-              </h2>
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-            </div>
+      {instagramUrl ? (
+        <img
+          src="/images/vidya-bharti-dwarka-insta.png"
+          alt="Instagram Preview"
+          className="h-full w-full object-contain"
+        />
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          Instagram Link Not Available
+        </div>
+      )}
 
-            <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
-              <div className="h-[350px] overflow-hidden rounded-md bg-gray-50">
+    </div>
+  </div>
 
-                {facebookUrl ? (
-                  <iframe
-                    src={facebookEmbed}
-                    width="100%"
-                    height="100%"
-                    style={{ border: "none", overflow: "hidden" }}
-                    scrolling="no"
-                    frameBorder="0"
-                    allowFullScreen
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                    title="Facebook"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full">
-                    Facebook Link Not Available
-                  </div>
-                )}
+  <a
+    href={instagramUrl || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
+  >
+    View On Instagram
+  </a>
+</div>
 
-              </div>
-            </div>
 
-            <a
-              href={facebookUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
-            >
-              View On Facebook
-            </a>
-          </div>
+{/* ================= Facebook ================= */}
 
+<div className="flex flex-col items-center">
+  <div className="flex items-center gap-3 mb-8">
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
+
+    <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
+      Facebook
+    </h2> 
+
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
+  </div>
+
+  <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
+    <div className="relative h-[350px] overflow-hidden rounded-md bg-gray-50">
+
+      {facebookUrl ? (
+        <img
+          src="/images/vidya-bharti-dwarka-fb.png"
+          alt="Facebook Preview"
+          className="h-full w-full object-cover"
+        />
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          Facebook Link Not Available
+        </div>
+      )}
+
+    </div>
+  </div>
+
+  <a
+    href={facebookUrl || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
+  >
+    View On Facebook
+  </a>
+</div>
         </div>
       </div>
     </div>
@@ -187,3 +184,5 @@ const GalleryFacebookSection = ({ header_data }) => {
 };
 
 export default GalleryFacebookSection;
+
+
